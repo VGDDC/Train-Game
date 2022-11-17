@@ -33,7 +33,12 @@ public class weaponPickup : MonoBehaviour
         {
             for(int i=0; i<generalInventory.slots.Length; i++)
             {
-                if
+                if(generalInventory.isFull[i] == false)
+                {
+                    //Add item to inventory
+                    generalInventory.isFull[i] = true;
+                    Destroy(gameObject);
+                }
             }
         }
     }
