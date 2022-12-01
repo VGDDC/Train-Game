@@ -5,14 +5,12 @@ using UnityEngine;
 public class weaponPickup : MonoBehaviour
 {
     private Inventory weaponInventory;
-    //private Inventory generalInventory;
     public GameObject itemButton;
 
     // Start is called before the first frame update
     void Start()
     {
         weaponInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        //generalInventory = GameObject.FindGameObjectWithTag("Items").GetComponent<Inventory>();
     }
 
     //Pickup up a weapon and add it to your inventory when you collide with it.
@@ -31,19 +29,6 @@ public class weaponPickup : MonoBehaviour
                 }
             }
         }
-        /*if(pickup.CompareTag("Inventory"))
-        {
-            for(int i=0; i<generalInventory.slots.Length; i++)
-            {
-                if(generalInventory.isFull[i] == false)
-                {
-                    //Add item to inventory
-                    generalInventory.isFull[i] = true;
-                    Instantiate(itemButton, generalInventory.slots[i].transform, false);
-                    Destroy(gameObject);
-                }
-            }
-        }*/
     }
 
     // Update is called once per frame
