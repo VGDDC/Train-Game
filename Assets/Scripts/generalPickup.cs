@@ -13,6 +13,7 @@ public class generalPickup : MonoBehaviour
         generalInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
+    //Pickup an item and put it in the general inventory
     private void OnTriggerEnter2D(Collider2D pickup)
     {
         if (pickup.CompareTag("Player"))
@@ -29,6 +30,9 @@ public class generalPickup : MonoBehaviour
             }
         }
     }
+
+    //Use an item (only give the option to discard items when full)
+
     // Update is called once per frame
     void Update()
     {

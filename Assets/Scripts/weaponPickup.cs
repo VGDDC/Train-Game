@@ -31,6 +31,9 @@ public class weaponPickup : MonoBehaviour
         }
     }
 
+    //Equip a weapon to the weapon inventory (only give the option to discard the item when the weapon inventory is full).
+
+
     // Update is called once per frame
     void Update()
     {
