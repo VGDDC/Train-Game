@@ -36,4 +36,6 @@ public class Character2DController : MonoBehaviour
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
     }
+
+    //Make a Dodge Function
 }
