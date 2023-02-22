@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3859460640269351029}
   - component: {fileID: 3730247139931413012}
   - component: {fileID: 6717461971374947152}
+  - component: {fileID: -6272458241299842681}
   m_Layer: 0
   m_Name: Mario_Fireball
   m_TagString: Untagged
@@ -137,3 +138,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+--- !u!114 &-6272458241299842681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4644748747861000088}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa67ab4e23425b2458b5fc15b2527931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firespeed: 20
