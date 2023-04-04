@@ -2,34 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class generalPickup : MonoBehaviour
+public class generalPickup : MonoBehaviour //this allows us to pick up objects
 {
-    private Inventory generalInventory;
-    public GameObject itemButton;
+    private static Inventory generalInventory; //player inventory (static because there's only one player)
+    public GameObject itemButton;              //TODO figure out what this does
 
     // Start is called before the first frame update
     void Start()
     {
         generalInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //initialize inventory to point to the player's inventory
     }
 
     //Pickup an item and put it in the general inventory
-    private void OnTriggerEnter2D(Collider2D pickup)
-    {
-        if (pickup.CompareTag("Player"))
+    private void OnTriggerEnter2D(Collider2D pickup) { if (pickup.CompareTag("Player")) { //if a player collides with an object:
+        for (int i = 0; i < generalInventory.slots.Length; i++) //loop through inventory slots
         {
-            for (int i = 0; i < generalInventory.slots.Length; i++)
+            if (! generalInventory.isFull[i]) //if inventory slot isn't full
             {
-                if (generalInventory.isFull[i] == false)
-                {
-                    //Add item to inventory
-                    generalInventory.isFull[i] = true;
-                    Instantiate(itemButton, generalInventory.slots[i].transform, false);
-                    Destroy(gameObject);
-                }
+                //Add item to inventory
+                generalInventory.isFull[i] = true; //make slot full
+                Instantiate(itemButton, generalInventory.slots[i].transform, false); //put item in inventory
+                Destroy(gameObject); //destroy physical object as a physics entity
             }
         }
-    }
+    } }
 
     //Use an item (only give the option to discard items when full)
 
