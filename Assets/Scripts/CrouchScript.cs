@@ -30,5 +30,5 @@ public class CrouchScript : MonoBehaviour
             if (transform.localScale.y != normalHeight.y)
                 transform.localScale = normalHeight;
         }
-        }
+    }
 }

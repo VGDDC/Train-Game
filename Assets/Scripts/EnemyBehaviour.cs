@@ -11,16 +11,16 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Start()
     {
-        Hitpoints = MaxHitpoints;
-        Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        Hitpoints = MaxHitpoints; //initialize health
+        Healthbar.SetHealth(Hitpoints, MaxHitpoints); //update health bar
     }
 
     public void TakeHit(float damage)
     {
-        Hitpoints -= damage;
-        Healthbar.SetHealth(Hitpoints, MaxHitpoints);
+        Hitpoints -= damage; //decrement health
+        Healthbar.SetHealth(Hitpoints, MaxHitpoints); //update health bar
 
-        if (Hitpoints <= 0)
+        if (Hitpoints <= 0) //if it dies, make it die
         {
             Destroy(gameObject);
         }
