@@ -5,7 +5,7 @@ using UnityEngine;
 public class generalPickup : MonoBehaviour //this allows us to pick up objects
 {
     private static Inventory generalInventory; //player inventory (static because there's only one player)
-    public GameObject itemButton;              //TODO figure out what this does
+    public GameObject itemButton;              //The item sprite that appears in the general inventory.
 
     // Start is called before the first frame update
     void Start()
