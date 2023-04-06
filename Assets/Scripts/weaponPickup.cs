@@ -5,7 +5,7 @@ using UnityEngine;
 public class weaponPickup : MonoBehaviour //This allows us to pickup weapons into the weapon slot
 {
     private static Inventory weaponInventory; //player weapon inventory (static because there's only one player)
-    public GameObject itemButton;             //The slots in the on screen weapon inventory that the player can select to equip item
+    public GameObject itemButton;             //The weapon sprite that appears in the weapon inventory.
 
     // Start is called before the first frame update
     void Start()
