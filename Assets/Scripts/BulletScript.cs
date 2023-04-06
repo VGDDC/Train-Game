@@ -23,9 +23,14 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Destroy the bullet on impact if collide with a gameobject tagged "Enemy".
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Hit");
+            // If the enemy has the EnemyBehaviour, then deal 1.0 point of damage to the collided enemy.
+            if (collision.gameObject.GetComponent<EnemyBehaviour>())
+            {
+                collision.gameObject.GetComponent<EnemyBehaviour>().TakeHit(1);
+            }
             Destroy(gameObject);
         }
     }
