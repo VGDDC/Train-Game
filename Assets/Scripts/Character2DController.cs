@@ -46,13 +46,16 @@ public class Character2DController : MonoBehaviour
 
         if(Input.GetMouseButton(0) && fireCoolDown == 0) {
             if(aimUp) {
-                //instantiate bullet above player, set velocity to be upwards
+                //Instantiate(bullet, position above player, Quaternion.identity);
+                //set bullet's velocity to be upwards
             }
             else if(facesRight) {
-                //instantiate bullet right of player, set velocity to be rightwards
+                //Instantiate(bullet, position right of player, Quaternion.identity);
+                //set bullet's velocity to be rightwards
             }
             else {
-                //instantiate bullet left of player, set velocity to be leftwards
+                //Instantiate(bullet, position left of player, Quaternion.identity);
+                //set bullet's velocity to be leftwards
             }
             //TODO actually instantiate the bullets & their velocities
             
